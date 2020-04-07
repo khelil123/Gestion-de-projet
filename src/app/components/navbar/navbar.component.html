@@ -1,0 +1,42 @@
+<nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block">{{getTitle()}}</a>
+    <!-- User -->
+    <ul class="navbar-nav align-items-center d-none d-md-flex">
+      <li class="nav-item" ngbDropdown placement="bottom-right">
+        <a class="nav-link pr-0" role="button" ngbDropdownToggle style="cursor: pointer;">
+          <div class="media align-items-center">
+            <span class="mb-0 text-sm  font-weight-bold">
+              Mohamed Khelil
+            </span>
+            <div class="media-body ml-2 d-none d-lg-block">
+              <span class="mb-0 text-sm  font-weight-bold"><i class="fas fa-th-large"></i></span>
+            </div>
+          </div>
+        </a>
+        <div class="dropdown-menu-arrow dropdown-menu-right" ngbDropdownMenu>
+          <div class=" dropdown-header noti-title">
+            <h6 class="text-center m-0">Bienvenu</h6>
+          </div>
+          <div class="dropdown-divider"></div>
+          <a routerLinkActive="active" [routerLink]="['/Dashboard']" class="dropdown-item">
+            <span class="badge badge-danger mr-3">
+            <i class="fab fa-dashcube"></i></span>
+            <span>Dashboard</span>
+          </a>
+          <a routerLinkActive="active" [routerLink]="['/Dashboard']" class="dropdown-item">
+            <span class="badge badge-primary mr-3">
+            <i class="fas fa-tasks"></i></span>
+            <span>Calendrier</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#!" class="dropdown-item">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>

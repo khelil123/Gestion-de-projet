@@ -1,0 +1,7 @@
+.sizing{
+    margin-left: 300px;
+    margin-right: 300px;
+}
+input[type=text]:focus{
+    border: 1px solid #5e72e4;
+}

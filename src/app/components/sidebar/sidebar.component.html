@@ -1,0 +1,39 @@
+<nav class="navbar navbar-vertical navbar-expand-md navbar-light bg-white" id="sidenav-main">
+  <div class="container-fluid">
+
+    <!-- Brand -->
+    <a class="navbar-brand pt-0" routerLinkActive="active" [routerLink]="['/dashboard']">
+      <img src="./assets/img/poulina.png" class="navbar-brand-img" alt="..." style="width: 50%;">
+    </a>
+    <div class="dropdown-divider"></div>
+    <div class="text-center">
+      <a href="#" class="d-block font-weight-bold">Mohamed Khelil</a>
+    </div>
+    <div class="dropdown-divider"></div>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse"  [ngbCollapse]="isCollapsed" id="sidenav-collapse-main">
+
+      <!-- Heading -->
+      <h6 class="navbar-heading text-muted">Autres</h6>
+      <!-- Navigation -->
+      <ul class="navbar-nav">
+          <li *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+              <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link">
+                  <i class="ni {{menuItem.icon}}"></i>
+                  {{menuItem.title}}
+              </a>
+          </li>
+      </ul>
+      <h6 class="navbar-heading text-muted">Gestion des services</h6>
+      <!-- Navigation -->
+      <ul class="navbar-nav">
+          <li *ngFor="let menuItemsServices of menuItemsService" class="{{menuItemsServices.class}} nav-item">
+              <a routerLinkActive="active" [routerLink]="[menuItemsServices.path]" class="nav-link">
+                  <i class="ni {{menuItemsServices.icon}}"></i>
+                  {{menuItemsServices.title}}
+              </a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
